@@ -178,7 +178,7 @@ svg {
 
 body {
     font-family: var(--ff-body);
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem 0;
 }
 
 /* Button */
@@ -211,6 +211,16 @@ body {
     padding: 0.75rem 2rem;
     margin-bottom: 6rem;
 }
+
+.btn-subscribe {
+    grid-area: subscribe;
+    background-color: var(--clr-pink);
+    border: none;
+    border-radius: 3px;
+    color: var(--clr-paleblue);
+    font-weight: bold;
+}
+
 
 /* Header */
 
@@ -356,7 +366,84 @@ body {
         bottom;
 }
 
+/* Footer */
+
 footer {
     background-color: var(--clr-darkcyan);
 }
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-container,
+.contact-container,
+.social-container {
+    padding: 3rem 2rem 2rem;
+}
+
+.news-title,
+.news-txt {
+    font-family: var(--ff-body);
+    color: var(--clr-paleblue);
+}
+
+.news-title{
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.news-txt {
+    margin-bottom: 2rem;
+}
+
+.footer-logo {
+    filter:  brightness(0) invert(1);
+    width: 65%;
+    margin-bottom: 1rem;
+}
+
+.contact {
+    display: grid;
+    row-gap: 15px;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 1fr 1fr;
+    padding: 1rem 0 0;
+}
+
+.phone,
+.email {
+    color: var(--clr-paleblue);
+}
+
+.social-container {
+    padding-top: 1rem;
+}
+
+.social-list {
+    display: flex;
+    gap: 15px;
+}
+
+/* Input */
+
+.subscribe-container {
+    display: grid;
+    row-gap: 10px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "email email"
+        ". subscribe";
+}
+
+.email-contact {
+    grid-area: email;
+    border: none;
+    border-radius: 3px;
+    padding: 0.7rem 2rem 0.7rem;
+}
+
+
 

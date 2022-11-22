@@ -1,0 +1,362 @@
+:root {
+    --clr-pink: hsl(322, 100%, 66%); /*FF52C1*/
+    --clr-lightpink: hsl(321, 100%, 78%);
+    --clr-lightred: hsl(0, 100%, 63%);
+    --clr-darkcyan: hsl(192, 100%, 9%); /*00252E*/
+    --clr-paleblue: hsl(207, 100%, 98%);
+
+    --ff-primary: 'Poppins', sans-serif;
+    --ff-secondary: 'Open Sans', sans-serif;
+
+    --size-1000: 6rem; /*96px*/
+    --size-900: 3.8125rem; /*61px*/
+    --size-800: 3rem; /*48px*/
+    --size-700: 2.5rem; /*40px*/
+    --size-600: 1.5rem; /*24px*/
+    --size-500: 1.25rem; /*20px*/
+    --size-400: 1rem; /*16px*/
+    --size-300: 0.875rem; /*14px*/
+    --size-200: 0.75rem; /*12px*/
+    --size-100: 0.625rem; /*10px*/
+
+    --clr-title: var(--clr-darkcyan);
+    --clr-body: var(--clr-darkcyan);
+    --clr-btn-try-border: var(--clr-pink);
+    --clr-btn-try-txt: var(--clr-pink);
+    --clr-btn-start-bg: var(--clr-pink);
+    --clr-btn-start-txt: var(--clr-paleblue);
+
+    --ff-title: var(--ff-primary);
+    --ff-body: var(--ff-secondary);
+}
+
+@media(max-width: 375px) {
+    .btn-try,
+    .btn-start {
+        font-size: var(--size-200);
+    }
+
+    .btn-subscribe,
+    .fact-txt {
+        font-size: var(--size-400);
+    }
+
+    .hero-title {
+        font-size: var(--size-600);
+    }
+
+    .hero-txt,
+    .wave-txt {
+        font-size: var(--size-300);
+    }
+
+    .fact-title {
+        font-size: var(--size-900);
+    }
+
+    .wave-title,
+    .news-title {
+        font-size: var(--size-500);
+        font-weight: bold;
+    }
+
+    .news-txt,
+    .phone,
+    .email {
+        font-size: var(--size-300);
+    }
+}
+
+@media(min-width: 1440px) {
+    .btn-try,
+    .btn-subscribe {
+        font-size: var(--size-400);
+    }
+
+    .btn-start,
+    .hero-txt {
+        font-size: var(--size-500);
+    }
+
+    .hero-title {
+        font-size: var(--size-800);
+    }
+
+    .fact-title {
+        font-size: var(--size-1000);
+    }
+
+    .fact-txt,
+    .news-title {
+        font-size: var(--size-600);
+    }
+
+    .wave-title {
+        font-size: var(--size-700);
+    }
+
+    .wave-txt {
+        font-size: var(--size-400);
+    }
+
+    .news-txt,
+    .phone,
+    .email {
+        font-size: var(--size-300);
+    }
+}
+
+/* https://piccalil.li/blog/a-modern-css-reset*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin/padding */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* General Styling */
+
+body {
+    font-family: var(--ff-body);
+    padding: 1.5rem;
+}
+
+/* Button */
+
+.btn {
+    text-decoration: none;
+    box-shadow: 0 0 3px 0.25px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.btn-try {
+    color: var(--clr-btn-try-txt);
+    border: 1px solid var(--clr-btn-try-border);
+    border-radius: 20px;
+    padding: 0.3rem 1.25rem;
+}
+
+.btn-start {
+    color: var(--clr-btn-start-txt);
+    background-color: var(--clr-btn-start-bg);
+    text-align: center;
+    font-weight: bold;
+    border-radius: 20px;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 0.75rem 2rem;
+    margin-bottom: 6rem;
+}
+
+/* Header */
+
+.header-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+.logo {
+    width: 40%;
+    height: 40%;
+}
+
+/* Main */ 
+
+/* Hero */
+
+.hero-flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 6rem;
+}
+
+.hero-title {
+    color: var(--clr-title);
+    font-family: var(--ff-title);
+    font-weight: bold;
+    line-height: 36px;
+    text-align: center;
+    margin: 0 auto 2rem;
+    max-width: 280px;
+}
+
+.hero-txt {
+    color: var(--clr-body);
+    text-align: center;
+    line-height: 21px;
+    margin: 0 auto 3.25rem;
+    max-width: 296px;
+}
+
+/* Facts */
+
+.facts-flex-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 8rem;
+    justify-content: center;
+    background-image: url(/images/bg-section-top-mobile-1.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.fact {
+    width: 180px;
+    margin: 0 auto;
+}
+
+.second-fact {
+    margin-top: 7rem;
+}
+
+.fact-icon {
+    width: 15%;
+}
+
+.fact-title {
+    color: var(--clr-title);
+    font-family: var(--ff-title);
+}
+
+.fact-txt {
+    color: var(--clr-body);
+}
+
+/* Waves */
+
+.waves-flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wave {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 0 5rem;
+}
+
+.wave-img {
+    width: 70%;
+    margin: 0 auto 3rem;
+}
+
+.txt-container {
+    text-align: center;
+    color: var(--clr-title);
+}
+
+.wave-title {
+    width: 344px;
+    margin-bottom: 1.5rem;
+    font-family: var(--ff-title);    
+}
+
+.wave-one,
+.wave-three {
+    background-color: var(--clr-paleblue);
+}
+
+.wave-two {
+    padding: 12rem 0 12rem;
+    background-image: 
+        url(/images/bg-section-top-mobile-2.svg),
+        url(/images/bg-section-bottom-mobile-1.svg);
+    background-repeat: 
+        no-repeat,
+        no-repeat;
+    background-size: 
+        contain,
+        contain;
+    background-position: 
+        bottom,
+        top;
+}
+
+.wave-four {
+    padding: 12rem 0 12rem;
+    background-image: 
+        url(/images/bg-section-bottom-mobile-2.svg),
+        url(/images/bg-footer-top-mobile.svg);
+    background-repeat: 
+        no-repeat
+        no-repeat;
+    background-size: 
+        contain,
+        contain;
+    background-position: 
+        top,
+        bottom;
+}
+
+footer {
+    background-color: var(--clr-darkcyan);
+}
+
